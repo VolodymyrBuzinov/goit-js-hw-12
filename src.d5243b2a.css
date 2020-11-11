@@ -1,0 +1,2 @@
+#gallery{display:flex;justify-content:center;list-style:none;padding-left:0}#gallery li:not(:last-child){margin-right:30px}#validation-input{outline:none;border:3px solid #bdbdbd}#validation-input.valid{border-color:#4caf50}#validation-input.invalid{border-color:#f44336}
+/*# sourceMappingURL=/goit-js-hw-07/src.d5243b2a.css.map */
