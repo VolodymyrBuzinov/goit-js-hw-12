@@ -1,6 +1,6 @@
 var debounce = require('debounce');
 const Handlebars = require("handlebars");
-const { error } = require('@pnotify/core');
+const { error, success } = require('@pnotify/core');
 import "@pnotify/core/dist/PNotify.css";
 import"@pnotify/core/dist/BrightTheme.css";
 import refs from './refs';
@@ -18,10 +18,14 @@ const onInputChange = function (evt) {
 }
 document.addEventListener('input', debounce(onInputChange, 500));
 
-
-const renderingPage = function (data) {         
+const renderingPage = function (data) {     
     if (data.length === 1) {
         refs.container.insertAdjacentHTML('beforeend', countryTemplate(data))
+        success({  
+    text: 'Country found!!!',
+            type: 'info',
+    hide: true,
+});   
     }
     if (data.length > 1 && data.length <=10) {
         refs.container.insertAdjacentHTML('beforeend', countriesTemplate(data))
