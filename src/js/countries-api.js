@@ -10,13 +10,12 @@ export default class CountriesAPI {
         const url = `${BASE_URL}/name/${this.nameQuery}`        
           return fetch(url).then(response => response.json()).then(data => {             
               return data
-          }).catch(evt => {
-              if (evt) {
-                   error({  
+          }).catch(evt => {                           
+                   evt = error({  
     text: 'Please enter a query!',
     type: 'info'
 });  
-               }
+               
            } );
     }    
     get name() {

@@ -18,7 +18,7 @@ const onInputChange = function (evt) {
 }
 document.addEventListener('input', debounce(onInputChange, 500));
 
-const renderingPage = function (data) {     
+const renderingPage = function (data) {    
     if (data.length === 1) {
         refs.container.insertAdjacentHTML('beforeend', countryTemplate(data))
         success({  
